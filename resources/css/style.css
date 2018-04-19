@@ -17,9 +17,8 @@ header {
 }
 
 .site-container {
-  max-width: 960px;
+  width: 960px;
   margin: auto;
-  border: 1px solid red;
 }
 
 .header-top_bar {
@@ -51,6 +50,9 @@ header {
   margin-right: 2rem;
   display: inline;
 }
+.header-top_bar-navigation_section-mobile_navigation {
+  display: none;
+}
 
 .header-title_container {
   display: flex;
@@ -72,7 +74,6 @@ header {
 main {
   margin-top: 3rem;
   margin-bottom: 5rem;
-  border: 1px solid blue;
 }
 
 .section_container {
@@ -92,12 +93,11 @@ margin-bottom: 3rem;
   text-align: center;
   height: 8rem;
   margin-right: 6rem;
-  border: 1px solid green;
 }
 
 .paper {
   margin-left: 6rem;
-  margin-right: 6rem; 
+  margin-right: 6rem;
 }
 .paper img {
   width: 3.5rem;
@@ -113,9 +113,11 @@ margin-bottom: 3rem;
 .subsection {
   width: 35%;
   margin-right: 5%;
+
 }
 .subsection h2 {
   font-weight: bold;
+  color: white;
   font-size: 1rem;
   background-color: cadetblue;
   padding: 0.5rem 1.25rem;
@@ -130,4 +132,108 @@ margin-bottom: 3rem;
 .footer_section img {
   margin-right: 1rem;
   height: 1.5rem;
+}
+
+/* Tablet Style  */
+@media only screen and (max-width:1024px) and (min-width:470px) {
+  .site-container {
+    width: 100%;
+    overflow: auto;
+  }
+  header {
+    width: 100%;
+    height: 22rem;
+  }
+   .header-top_bar {
+    position: fixed;
+    z-index: 2;
+    margin-top: 0;
+  }
+  .header-title_box {
+    padding: 0.75rem 4rem;
+    margin: 5rem 2rem;
+    position: relative;
+    top: 3.5rem;
+  }
+}
+.header-title_box h1 {
+  font-size: 1.33rem;
+}
+
+/* Mobile Style */
+@media only screen and (max-width:470px) {
+  .site-container {
+    width: 100%;
+  }
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+
+  .header-top_bar {
+   position: fixed;
+   z-index: 2;
+   margin-top: 0;
+   overflow: hidden;
+ }
+
+  .header-top_bar-navigation_section-desktop_navigation, .header-top_bar-title {
+    display: none;
+  }
+  .header-top_bar-navigation_section-mobile_navigation {
+    display: inline;
+  }
+
+  .header-title_box {
+    text-align: center;
+    padding: 1rem 0rem;
+    margin: 9rem 0rem;
+    width: 100%;
+    position: relative;
+     top: 3.5rem;
+  }
+  .header-title_box h1 {
+    font-size: 1rem;
+  }
+  .image_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3.77rem 0;
+
+  }
+  .image_content {
+    margin:  0;
+    font-size: 0.77rem;
+  }
+  .description_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .subsection {
+    width: 100%;
+  }
+  .subsection h2 {
+    margin-bottom: 1rem;
+    width: auto;
+    text-align: center;
+  }
+  .subsection p {
+    margin-bottom: 4rem;
+  }
+  .paper, .ruler {
+    margin-bottom: 1.54rem;
+  }
+  footer span{
+    display: none;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+
+  }
+  .footer_section {
+    justify-content: center;
+    margin-left: 0;
+  }
 }
