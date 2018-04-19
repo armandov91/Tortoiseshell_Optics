@@ -93,6 +93,35 @@ margin-bottom: 3rem;
   margin-right: 6rem;
   border: 1px solid green;
 }
-.image_content img {
+
+.paper {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+.paper img {
   width: 3.5rem;
+}
+.ruler img, .truck  img {
+  width: 5rem;
+}
+figcaption,p {
+  font-size: 1rem;
+  font-family: Helvetica;
+  line-height: 1.4;
+}
+
+.description_container {
+  display: flex;
+  justify-content: center;
+}
+.subsection {
+  width: 35%;
+  margin-right: 5%;
+}
+.subsection h2 {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: cadetblue;
+  padding: 0.5rem 1.25rem;
+  width: 10rem;
 }
